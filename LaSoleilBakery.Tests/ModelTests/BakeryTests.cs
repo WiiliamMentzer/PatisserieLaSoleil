@@ -1,17 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ToDoList.Models;
+using Bakery.Dough;
 
-namespace ToDoList.Tests
+namespace Bakery.Dough
 {
   [TestClass]
-  public class ItemTests
+  public class Bread
   {
 
     [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    public void Create_Bread_Quantity()
     {
-      Item newItem = new Item();
-      Assert.AreEqual(typeof(Item), newItem.GetType());
+      Bread chibata = new Bread();
+      Assert.AreEqual(typeof(Bread), chibata.GetType());
     }
 
   }
