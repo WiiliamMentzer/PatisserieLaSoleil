@@ -15,4 +15,24 @@ namespace Bakery.Dough
     }
 
   }
+
+  [TestClass]
+  public class Pastry
+  {
+
+    [TestMethod]
+    public void Create_Pastry_Quantity()
+    {
+      Pastry Danish = new Pastry();
+      Assert.AreEqual(typeof(Pastry), Danish.GetType());
+    }
+
+    public void Set_Pastry_Price()
+    {
+      Pastry Danish = new Pastry();
+      Pastry.Set_Pastry_Price(3); 
+      Assert.AreEqual(3, Danish.PastryPrice);
+    }
+
+  }
 }
