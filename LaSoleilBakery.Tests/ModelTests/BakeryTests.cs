@@ -29,9 +29,8 @@ namespace Bakery.Dough
 
     public void Set_Pastry_Price()
     {
-      Pastry Danish = new Pastry();
-      Pastry.Set_Pastry_Price(3); 
-      Assert.AreEqual(3, Danish.PastryPrice);
+      Pastry Danish = new Pastry(3, 3); 
+      Assert.AreEqual(3, Danish.GetPrice());
     }
 
   }
