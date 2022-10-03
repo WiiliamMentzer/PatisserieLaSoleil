@@ -15,12 +15,13 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Pastry), Danish.GetType());
     }
 
-    // [TestMethod]
-    // public void Set_Pastry_Price()
-    // {
-    //   Pastry Danish = new Pastry(3, 3); 
-    //   Assert.AreEqual(3, Danish.GetPrice());
-    // }
+    [TestMethod]
+    public void Set_Pastry_Price_Get_Price()
+    {
+      int PriceOfPastry = 3;
+      Pastry Danish = new Pastry(PriceOfPastry, 20); 
+      Assert.AreEqual(PriceOfPastry, Danish.GetPrice());
+    }
 
   }
 }
