@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Bakery.Dough;
+using Bakery.Models;
 
-public class Bakery
+public class OpenStore
 {
  public static void Main()
  {

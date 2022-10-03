@@ -1,20 +1,26 @@
 using System.Collections.Generic;
-namespace Bakery.Dough {
 
+namespace Bakery.Models 
+{
   public class Bread
   {
     public int BreadPrice { get; set; }
     public int BreadQuantity { get; set;}
 
+    public Bread(int price, int quantity)
+    {
+      BreadPrice = price;
+      BreadQuantity = quantity;
+    }
+
     public void SetQuantity(int quantity)
     {
       BreadQuantity = quantity;
     }
-  }
 
-  public class Pastry
-  {
-    public int PastryPrice { get; set; }
-    public int PastryQuantity { get; set;}
+    public void setPrice(int price)
+    {
+      BreadPrice = price;
+    }
   }
 }
