@@ -9,9 +9,9 @@ namespace Bakery.Tests
   public class Bread
   {
     [TestMethod]
-    public void Create_Bread_Quantity()
+    public void Create_Bread()
     {
-      Bread chibata = new Bread(3, 3);
+      Bread chibata = new Bread();
       Assert.AreEqual(typeof(Bread), chibata.GetType());
     }
 

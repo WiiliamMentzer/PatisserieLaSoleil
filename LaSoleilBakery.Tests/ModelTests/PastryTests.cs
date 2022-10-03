@@ -6,10 +6,10 @@ using Bakery.Models;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class Pastry
+  public class PastryTests
   {
     [TestMethod]
-    public void Create_Pastry_Quantity()
+    public void Create_Pastry()
     {
       Pastry Danish = new Pastry(3, 3);
       Assert.AreEqual(typeof(Pastry), Danish.GetType());
