@@ -37,7 +37,7 @@ namespace Bakery.Tests
       double discountMultiplier = .80;
       Bread Sourdough = new Bread (5, 5);
 
-      Sourdough.breadDiscount(discountMultiplier);
+      Sourdough.breadDiscountByDecimal(discountMultiplier);
 
       Assert.AreEqual(4, Sourdough.BreadPrice); 
     }
@@ -51,14 +51,24 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void Set_Bread_Discounted_Price_Get_Total_Discounted_Bread_Price()
+    public void Set_Bread_Discounted_Price_By_Decimal_Get_Total_Discounted_Bread_Price()
     {
       double discountMultiplier = .80;
       Bread Sourdough = new Bread (5, 5);
 
-      Sourdough.breadDiscount(discountMultiplier);
+      Sourdough.breadDiscountByDecimal(discountMultiplier);
 
       Assert.AreEqual(20, Sourdough.getTotalBreadPrice()); 
+    }
+
+    [TestMethod]
+    public void Set_Bread_Discounted_Price_Get_Total_Discounted_Bread_Price()
+    {
+      Bread Sourdough = new Bread (5, 5);
+
+      Sourdough.breadDiscount();
+
+      Assert.AreEqual(20, Sourdough.BreadTotalCost); 
     }
   }
 }

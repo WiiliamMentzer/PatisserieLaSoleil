@@ -37,7 +37,7 @@ namespace Bakery.Tests
       double discountMultiplier = .80;
       Pastry Danish = new Pastry (5, 5);
 
-      Danish.pastryDiscount(discountMultiplier);
+      Danish.pastryDiscountByDecimal(discountMultiplier);
 
       Assert.AreEqual(4, Danish.PastryPrice); 
     }
@@ -51,14 +51,24 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void Set_Pastry_Discounted_Price_Get_Total_Discounted_Pastry_Price()
+    public void Set_Pastry_Discounted_Price_By_Decimal_Get_Total_Discounted_Pastry_Price()
     {
       double discountMultiplier = .80;
       Pastry Danish = new Pastry (5, 5);
 
-      Danish.pastryDiscount(discountMultiplier);
+      Danish.pastryDiscountByDecimal(discountMultiplier);
 
       Assert.AreEqual(20, Danish.getTotalPastryPrice()); 
+    }
+
+    [TestMethod]
+    public void Set_Pastry_Discounted_Price_Get_Total_Discounted_Pastry_Price()
+    {
+      Pastry Danish = new Pastry (2, 5);
+
+      Danish.pastryDiscount();
+
+      Assert.AreEqual(9, Danish.PastryTotalCost); 
     }
   }
 }

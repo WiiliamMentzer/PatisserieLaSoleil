@@ -7,6 +7,7 @@ namespace Bakery.Models
   {
     public int PastryPrice { get; set; }
     public int PastryQuantity { get; set; }
+    public int PastryTotalCost { get; set; }
 
     public Pastry(int price, int quantity)
     {
@@ -39,11 +40,18 @@ namespace Bakery.Models
       return PastryQuantity;
     }
 
-    public double pastryDiscount(double discount)
+    public double pastryDiscountByDecimal(double discount)
     { 
       double afterDiscount = PastryPrice * discount;
       PastryPrice = Convert.ToInt32(afterDiscount);
       return PastryPrice;
+    }
+
+    public int pastryDiscount()
+    {
+      int discount = PastryQuantity/3;
+      PastryTotalCost = (PastryQuantity * PastryPrice) - discount;
+      return PastryTotalCost;
     }
     
   }
