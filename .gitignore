@@ -1,4 +1,2 @@
-LaSoleilBakery/bin/
-LaSoleilBakery/obj/
-LaSoleilBakery.Tests/bin/
-LaSoleilBakery.Tests/obj/
+bin/
+obj/
