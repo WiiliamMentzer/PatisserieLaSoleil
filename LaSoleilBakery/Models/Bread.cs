@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Bakery.Models 
 {
@@ -13,7 +14,7 @@ namespace Bakery.Models
       BreadQuantity = quantity;
     }
 
-    public void SetQuantity(int quantity)
+    public void setQuantity(int quantity)
     {
       BreadQuantity = quantity;
     }
@@ -21,6 +22,28 @@ namespace Bakery.Models
     public void setPrice(int price)
     {
       BreadPrice = price;
+    }
+
+    public int getIndividualPrice()
+    {
+      return BreadPrice;
+    }
+
+    public int getTotalBreadPrice()
+    {
+      return BreadQuantity * BreadPrice;
+    }
+
+    public int getQuantity()
+    {
+      return BreadQuantity;
+    }
+
+    public double breadDiscount(double discount)
+    { 
+      double afterDiscount = BreadPrice * discount;
+      BreadPrice = Convert.ToInt32(afterDiscount);
+      return BreadPrice;
     }
   }
 }
